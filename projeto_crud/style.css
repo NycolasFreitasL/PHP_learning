@@ -1,0 +1,280 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+section {
+  padding: 1%;
+  padding-bottom: 5%;
+  border-radius: 3px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background-color: rgb(229, 229, 229);
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.modal {
+  display: none; /* Inicia a modal escondida */
+  position: fixed; /* Fixa a posição na tela */
+  z-index: 1; /* Garante que a modal fique na frente de outros elementos */
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Adiciona rolagem se o conteúdo for grande */
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo preto semitransparente */
+  display: flex; /* Para centralizar o conteúdo */
+  justify-content: center;
+  align-items: center;
+}
+
+.centralizar {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #8a8a8a;
+}
+
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-box h2 {
+  margin-top: 0;
+  color: #444;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-box input[type="submit"],
+.form-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-box input[type="submit"]:hover,
+.form-box button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+
+table button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table button.edit {
+  background-color: #28a745;
+  color: #fff;
+}
+
+table button.edit:hover {
+  background-color: #1e7e34;
+}
+
+table button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+table button.delete:hover {
+  background-color: #a71d2a;
+}
+
+.pesquisar {
+  border-style: double;
+  text-align: center;
+  width: 5vw;
+}
+
+.col {
+  flex: 1;
+  /*width: 300px;       /* largura fixa */
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 20px;
+}
+.container {
+  display: flex; /* ativa o Flexbox */
+  gap: 20px; /* espaço entre colunas */
+}
+
+.icon {
+  width: 16px; /* Ajuste o tamanho do ícone (largura) */
+  height: 16px; /* Ajuste o tamanho do ícone (altura) */
+  vertical-align: middle; /* Ajuda a alinhar o ícone com o texto */
+}
+
+.bicon {
+  border: none;
+  border-radius: 5px; /* Adiciona uma pequena borda arredondada */
+  cursor: pointer;
+  background-color: transparent; /* Remove o fundo padrão para que a cor seja definida pelas classes de cor */
+  padding: 8px; /* Ajuste o preenchimento para um botão mais compacto */
+  width: 32px; /* Garante que o botão tenha uma largura fixa */
+  height: 32px; /* Garante que o botão tenha uma altura fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cores específicas para os botões de editar e excluir */
+.bicon.edit {
+  background-color: #28a745; /* Verde para o botão de editar */
+}
+
+.bicon.delete {
+  background-color: #dc3545; /* Vermelho para o botão de excluir */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.bicon.edit:hover {
+  background-color: #1e7e34;
+}
+
+.bicon.delete:hover {
+  background-color: #a71d2a;
+}
+
+/* Estilo para o conteúdo central da modal */
+.modal-content {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  position: relative; /* Necessário para posicionar o botão de fechar */
+}
+
+/* Estilo para o botão de fechar (X) */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Estilo para os grupos de formulário (label + input) */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo para o botão "salvar alterações" */
+.salvar-alteracoes {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.salvar-alteracoes:hover {
+  background-color: #0056b3;
+}
+
+.actions {
+  display: flex;
+  gap: 5px; /* Adiciona um pequeno espaço entre os botões */
+}

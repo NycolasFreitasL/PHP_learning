@@ -1,6 +1,7 @@
 <?php
     
     include 'config.php';
+    session_start();
 
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
@@ -18,15 +19,15 @@
             session_start();               // Começa a sessão
             $_SESSION['usuario_id'] = $usuario['id'];  // Salva o ID do usuário na sessão
             $_SESSION['usuario_email'] = $usuario['email']; // Salva o email na sessão
-            echo "Login realizado com sucesso!";
-            // Aqui você pode redirecionar para a página principal
-            header("Location: dashboard.html"); exit;
+            
+            
+            header("Location: dashboard.php"); exit;
         } else {
-            echo "Usuario ou senha incorreta";
+            
             header("location: index.php?erro=senha");
         }
     } else {
-        echo "Usuario ou senha incorreta";
+        
         header("location: index.php?erro=senha");
     }
 

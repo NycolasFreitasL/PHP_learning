@@ -31,7 +31,7 @@
         exit;
 
     } catch (PDOException $e) {
-        header("Location: registro.html?erro=banco");
+        header("Location: registrar.php?erro=banco");
         exit;
     }
 ?>

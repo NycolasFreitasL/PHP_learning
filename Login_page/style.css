@@ -2,6 +2,7 @@ body{
     font-family: sans-serif;
     font: bold;
     display: block;
+    
 }
 h2{
     text-align: center;
@@ -11,6 +12,7 @@ a{
     text-decoration: none;
     color: #1a437f;
 }
+
 
 .erro {
     margin-top: 15px;
@@ -70,5 +72,19 @@ input{
     margin-bottom: 5%;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sair{
+    background-color: #b90909; /* azul */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 

@@ -45,7 +45,12 @@
         <div class="erro">As senhas devem ser iguais!</div>
         <?php elseif (isset($_GET['sucesso'])): ?>
         <div class="sucesso">Usuário cadastrado com sucesso!</div>
-        <?php endif; ?>
+        <?php
+
+        header("Location: index.php");
+      
+      
+      endif; ?>
 
       </div>
     </div>
